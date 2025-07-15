@@ -1,16 +1,15 @@
-# news_app_backend/settings.py
 
 import os
 from datetime import timedelta
-from decouple import config # pip install python-decouple
+from decouple import config 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = config('SECRET_KEY') # Generate a strong one!
+SECRET_KEY = config('SECRET_KEY') 
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1'] # Add your React dev server if different
+ALLOWED_HOSTS = ['localhost', '127.0.0.1'] 
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -21,14 +20,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
-    'corsheaders', # pip install django-cors-headers
-    'news', # Your app
+    'corsheaders', 
+    'news', 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware', # Must be high up
+    'corsheaders.middleware.CorsMiddleware', 
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -80,8 +79,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Kolkata' # Or 'UTC' or your local timezone
-
+TIME_ZONE = 'Asia/Kolkata' 
 USE_I18N = True
 
 USE_L10N = True
@@ -95,9 +93,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    )
+
 }
 
 # Simple JWT Settings
@@ -131,10 +127,20 @@ SIMPLE_JWT = {
 
 
 # CORS Settings
-CORS_ALLOW_ALL_ORIGINS = True # For development, use specific origins in production
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000", # Your React app's URL
-# ]
+CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000", 
+]
 
-# News API Key (store in .env)
 NEWS_API_KEY = config('NEWS_API_KEY')
+
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "karthiajar06@gmail.com"  
+EMAIL_HOST_PASSWORD = "kxsv akws wgbz sprd"
+
+
+
