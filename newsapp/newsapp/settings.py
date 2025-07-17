@@ -10,7 +10,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1'] 
+ALLOWED_HOSTS = ["*"] 
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -126,12 +126,13 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-FRONTEND_URL = "http://localhost:3000"
+FRONTEND_URL = "https://news-frontend-8uwt.vercel.app/"
 
 # CORS Settings
 CORS_ALLOW_ALL_ORIGINS = True 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000", 
+    "http://localhost:3000", "https://news-frontend-8uwt.vercel.app/","https://news-backend-jxwy.vercel.app"
+
 ]
 
 NEWS_API_KEY = config('NEWS_API_KEY')
