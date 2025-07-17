@@ -1,0 +1,39 @@
+# Core Django framework
+Django>=4.2.0,<5.0.0
+
+# For REST API
+djangorestframework>=3.14.0
+
+# For JWT authentication
+djangorestframework-simplejwt>=5.3.0
+
+# For CORS handling
+django-cors-headers>=4.2.0
+
+# For environment variables
+python-decouple>=3.8
+
+# For TOTP (Time-based One-Time Password) functionality
+# This is commonly used with the mfa_secret field for 2FA
+pyotp>=2.8.0
+
+# For QR code generation (often used with TOTP setup)
+qrcode>=7.4.2
+Pillow>=10.0.0
+
+# For News API integration
+requests>=2.31.0
+
+# Database (SQLite is built-in, but for production you might want PostgreSQL)
+# psycopg2-binary>=2.9.0  # Uncomment for PostgreSQL
+
+# For production deployment
+gunicorn>=21.0.0
+whitenoise>=6.5.0
+
+# For email functionality (using Gmail SMTP)
+# No additional packages needed for SMTP email backend
+
+# For development
+# django-debug-toolbar>=4.2.0
+# django-extensions>=3.2.0
