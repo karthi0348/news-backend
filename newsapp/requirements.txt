@@ -1,39 +1,66 @@
-# Core Django framework
-Django>=4.2.0,<5.0.0
+Django==4.1.6
 
-# For REST API
-djangorestframework>=3.14.0
+asgiref==3.6.0
 
-# For JWT authentication
-djangorestframework-simplejwt>=5.3.0
+certifi==2022.12.7
 
-# For CORS handling
+charset-normalizer==3.0.1
+
+coreapi==2.3.3
+
+coreschema==0.0.4
+
 django-cors-headers>=4.2.0
 
-# For environment variables
-python-decouple>=3.8
+django-rest-swagger==2.2.0
 
-# For TOTP (Time-based One-Time Password) functionality
-# This is commonly used with the mfa_secret field for 2FA
-pyotp>=2.8.0
+djangorestframework==3.14.0
 
-# For QR code generation (often used with TOTP setup)
-qrcode>=7.4.2
+djangorestframework-simplejwt>=5.3.0
+
+drf-yasg==1.21.5
+
+gunicorn>=21.0.0
+
+idna==3.4
+
+inflection==0.5.1
+
+itypes==1.2.0
+
+Jinja2==3.1.2
+
+MarkupSafe==2.1.2
+
+openapi-codec==1.3.2
+
+packaging==23.0
+
 Pillow>=10.0.0
 
-# For News API integration
-requests>=2.31.0
+psycopg2-binary==2.9.5
 
-# Database (SQLite is built-in, but for production you might want PostgreSQL)
-# psycopg2-binary>=2.9.0  # Uncomment for PostgreSQL
+pyotp>=2.8.0
 
-# For production deployment
-gunicorn>=21.0.0
+python-decouple>=3.8
+
+pytz==2022.7.1
+
+qrcode>=7.4.2
+
+requests==2.28.2
+
+ruamel.yaml==0.17.21
+
+ruamel.yaml.clib==0.2.7
+
+simplejson==3.18.3
+
+sqlparse==0.4.3
+
+uritemplate==4.1.1
+
+urllib3==1.26.14
+
 whitenoise>=6.5.0
 
-# For email functionality (using Gmail SMTP)
-# No additional packages needed for SMTP email backend
-
-# For development
-# django-debug-toolbar>=4.2.0
-# django-extensions>=3.2.0

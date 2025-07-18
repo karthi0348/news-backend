@@ -126,14 +126,24 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-FRONTEND_URL = "https://news-frontend-8uwt.vercel.app/"
+FRONTEND_URL = "https://news-frontend-a2up.vercel.app/"
 
 # CORS Settings
 CORS_ALLOW_ALL_ORIGINS = True 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000", "https://news-frontend-8uwt.vercel.app/","https://news-backend-jxwy.vercel.app"
+    "http://localhost:3000",
 
 ]
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
+
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+MEDIA_URLS ='/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 NEWS_API_KEY = config('NEWS_API_KEY')
 
