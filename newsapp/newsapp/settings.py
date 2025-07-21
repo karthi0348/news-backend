@@ -128,7 +128,7 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-FRONTEND_URL = "https://news-frontend-a2up.vercel.app/"
+FRONTEND_URL = "https://newsapp-one-theta.vercel.app/"
 
 # CORS Settings
 CORS_ALLOW_ALL_ORIGINS = True 
